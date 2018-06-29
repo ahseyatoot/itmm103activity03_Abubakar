@@ -142,4 +142,3 @@ echo $temp_array[$i].", ";
 </br>
 </body>
 </html>
-</html>
