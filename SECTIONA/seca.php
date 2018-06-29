@@ -18,7 +18,14 @@
 <a href="../SECTIONI/seci.html"><center>Section I</center><br></a>
 </p>
 
+<?php
 
+echo "1.<br>";
+
+phpinfo();
+
+
+?>
 
 </br>
 </body>
