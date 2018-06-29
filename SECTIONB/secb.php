@@ -6,7 +6,7 @@
 <h2><center>THIS IS SECTION B</center></h2>
 <br>
 
-<p>
+    <p>
 <a href="../index.html"><center>Main Page</center><br></a>
 <a href="../SECTIONA/seca.php"><center>Section A</center><br></a>
 <a href="../SECTIONC/secc.php"><center>Section C</center><br></a>
@@ -20,9 +20,10 @@
 
 <?php
 $color = array('white', 'green', 'red', 'blue', 'black');
-echo "The memory of that scene for me is like a frame of film forever frozen at that moment: the $color[2] carpet, the $color[1] lawn, the $color[0] house, the leaden sky. The new president and his first lady. - Richard M. Nixon"."\n";
+echo "1.The memory of that scene for me is like a frame of film forever frozen at that moment:
+the $color[2] carpet, the $color[1] lawn, the $color[0] house, the leaden sky. The new president and his first lady. -Richard M. Nixon"."\n";
 
-echo "\n";
+echo "<br><br><br>";
 
 $ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg",
 "Belgium"=> "Brussels", "Denmark"=>"Copenhagen",
@@ -39,15 +40,16 @@ $ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg",
 asort($ceu) ;
 foreach($ceu as $country => $capital)
 {
-echo "The capital of $country is $capital"."\n" ;
+echo "2.";
+echo "The capital of $country is $capital <br>";
 }
-echo "\n";
+echo "<br>";
 
 function w3rfunction($value,$key)
 {
-echo "$key : $value"."\n";
+echo "$key : $value"."<br>";
 }
-$a = '{"Title": "The Cuckoos Calling",
+$a = '{"3.Title": "The Cuckoos Calling",
 "Author": "Robert Galbraith",
 "Detail":
 { 
@@ -57,23 +59,23 @@ $a = '{"Title": "The Cuckoos Calling",
 $j1 = json_decode($a,true);
 array_walk_recursive($j1,"w3rfunction");
 
-echo "\n";
+echo "<br>";
 $original = array( '1','2','3','4','5' );
-echo 'Original array : '."\n";
+echo '4.Original array : '."<br>";
 foreach ($original as $x) 
 {echo "$x ";}
 $inserted = '$';
 array_splice( $original, 3, 0, $inserted ); 
-echo " \n After inserting '$' the array is : "."\n";
+echo "  After inserting '$' the array is : "."<br>";
 foreach ($original as $x) 
 {echo "$x ";}
-echo "\n";
+echo "<br>";
 
-echo "\n";
+echo "<br>";
 echo "
-Associative array : Ascending order sort by value
-";
-$array2=array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); asort($array2);
+5.Associative array : Ascending order sort by value
+<br>";
+$array2=array("Sophia"=>"31<br>","Jacob"=>"41<br>","William"=>"39<br>","Ramesh"=>"40<br>"); asort($array2);
 foreach($array2 as $y=>$y_value)
 {
 echo "Age of ".$y." is : ".$y_value."
@@ -81,8 +83,8 @@ echo "Age of ".$y." is : ".$y_value."
 }
 echo "
 Associative array : Ascending order sort by Key
-";
-$array3=array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); ksort($array3);
+<br>";
+$array3=array("Sophia"=>"31<br>","Jacob"=>"41<br>","William"=>"39<br>","Ramesh"=>"40<br>"); ksort($array3);
 foreach($array3 as $y=>$y_value)
 {
 echo "Age of ".$y." is : ".$y_value."
@@ -90,8 +92,8 @@ echo "Age of ".$y." is : ".$y_value."
 }
 echo "
 Associative array : Descending order sorting by Value
-";
-$age=array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40");
+<br>";
+$age=array("Sophia"=>"31<br>","Jacob"=>"41<br>","William"=>"39<br>","Ramesh"=>"40<br>");
 arsort($age);
 foreach($age as $y=>$y_value)
 {
@@ -100,14 +102,14 @@ echo "Age of ".$y." is : ".$y_value."
 }
 echo "
 Associative array : Descending order sorting by Key
-";
-$array4=array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"); krsort($array4);
+<br>";
+$array4=array("Sophia"=>"31<br>","Jacob"=>"41<br>","William"=>"39<br>","Ramesh"=>"40<br>"); krsort($array4);
 foreach($array4 as $y=>$y_value)
 {
 echo "Age of ".$y." is : ".$y_value."
 ";
 } 
-echo "\n";
+echo "<br>";
 $month_temp = "78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 81, 76, 73,
 68, 72, 73, 75, 65, 74, 63, 67, 65, 64, 68, 73, 75, 79, 73";
 $temp_array = explode(',', $month_temp);
@@ -118,14 +120,16 @@ foreach($temp_array as $temp)
  $tot_temp += $temp;
 }
  $avg_high_temp = $tot_temp/$temp_array_length;
- echo "Average Temperature is : ".$avg_high_temp."
-"; 
+ echo "6.Average Temperature is : ".$avg_high_temp."
+<br>"; 
 sort($temp_array);
 echo " List of five lowest temperatures :";
 for ($i=0; $i< 5; $i++)
 { 
 echo $temp_array[$i].", ";
+
 }
+echo "<br>";
 echo "List of five highest temperatures :";
 for ($i=($temp_array_length-5); $i< ($temp_array_length); $i++)
 {
